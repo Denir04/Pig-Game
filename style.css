@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body{
+    background-image: linear-gradient(to bottom right, rgb(142, 22, 22), rgb(150, 48, 168));
+    height: 100vh;
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 65%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.player--0,
+.player--1{
+    background-color: rgba(255,255,255,0.5);
+    width: 50%;
+    display: flex;
+    padding: 5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.2);
+}
+
+.turn{
+    transition: 1s;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.winner{
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.winner .box-score .user{
+    transition: 1s;
+    color: white;
+}
+
+.user{
+    font-size: 2.5rem;
+}
+
+.score{
+    font-size: 4rem;
+    color: rgb(190, 18, 110);
+    font-weight: bold;
+}
+
+.box-current{
+    background-color: rgb(199, 65, 136);
+    width: 60%;
+    height: 30%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+
+.current-label{
+    font-size: 1.1rem;
+}
+
+.current-score{
+    font-size: 2rem;
+}
+
+.btn{
+    position: absolute;
+    color: rgb(105, 103, 103);
+    background-color: rgba(255,255,255,0.8);
+    top: 0;
+    left: 0;
+    z-index: 5;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn:active{
+    transition: 0.2s;
+    transform: translate(-50%,10%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.new-game{
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%,0%);
+}
+
+.roll-dice{
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%,0%);
+}
+
+.hold{
+    left: 50%;
+    top: 78%;
+    transform: translate(-50%,0%);
+}
+
+.dice{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #f1efef;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%,0%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.dot{
+    width: 35%;
+    height: 35%;
+    border-radius: 10rem;
+    background-color: rgb(219, 142, 75);
+    margin: 33%;
+}
+
+.hidden{
+    display: none;
+}
+
+.invisible{
+    visibility: hidden;
+}
